@@ -1,6 +1,6 @@
 package org.jarmee;
 
-import static org.junit.Assert.*;
+import static org.assertj.core.api.Assertions.*;
 
 import org.junit.Test;
 
@@ -8,6 +8,6 @@ public class AppTest {
     
     @Test 
     public void test() {
-        assertTrue(true);
+        assertThat("Test").isEqualTo("Test");
     }
 }
