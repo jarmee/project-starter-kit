@@ -13,6 +13,19 @@
                 <version>1.5.0</version>
                 <executions>
                     <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+							<executable>npm</executable>
+							<arguments>
+								<argument>install</argument>
+							</arguments>
+						</configuration>
+                    </execution>
+                    <execution>
 						<id>npm run test</id>
 						<goals>
 							<goal>exec</goal>
