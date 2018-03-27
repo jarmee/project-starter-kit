@@ -15,7 +15,7 @@
                     <execution>
                         <id>npm install</id>
                         <goals>
-                            <goal>npm</goal>
+                            <goal>exec</goal>
                         </goals>
                         <phase>generate-resources</phase>
                         <configuration>
