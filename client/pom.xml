@@ -7,13 +7,29 @@
     <version>0.1.0</version>
     <build>
         <plugins>
+        <plugin>
+            <groupId>com.github.eirslett</groupId>
+            <artifactId>frontend-maven-plugin</artifactId>
+            <version>0.0.23</version>
+                 <execution>
+                    <id>install node and npm</id>
+                    <goals>
+                        <goal>install-node-and-npm</goal>
+                    </goals>
+                    <phase>generate-resources</phase>
+                    <configuration>
+                        <nodeVersion>6.11.1</nodeVersion>
+                        <npmVersion>5.8.9</npmVersion>
+                    </configuration>
+                </execution>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.5.0</version>
                 <executions>
                     <execution>
-						<id>npm run test (test)</id>
+						<id>npm run test</id>
 						<goals>
 							<goal>exec</goal>
 						</goals>
