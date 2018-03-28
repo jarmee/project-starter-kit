@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 import { HelloWorldComponent } from './hello-world.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from '../shared/reducers';
@@ -8,8 +9,7 @@ import { HelloWorldEffects } from '../shared/effects/hello-world.effects';
 
 @NgModule({
   imports: [
-    CommonModule,
-    EffectsModule.forFeature([HelloWorldEffects])
+    CommonModule
   ],
   declarations: [HelloWorldComponent],
   exports: [

@@ -5,13 +5,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { HelloWorldEffects } from './shared/effects/hello-world.effects';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './shared/reducers/hello-world.reducer';
+import { SharedModule } from './shared/shared.module';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         HelloWorldModule,
         StoreModule.forRoot(reducer),
-        EffectsModule.forRoot([HelloWorldEffects])
+        SharedModule
       ],
       declarations: [
         AppComponent
